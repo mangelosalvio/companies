@@ -4,14 +4,16 @@ const Company = require('./../../models/Company')
 const mongoose = require('mongoose')
 
 router.post('/', (req, res) => {
-  const selectedCompanies = req.body.selectedCompanies.map(company => company._id);
+  console.log(req.body.selectedCourses);
+  const selectedCourses = req.body.selectedCourses.map(company => company._id);
+  
   let query = {}
-  if ( selectedCompanies.length > 0 ) {
+  if ( selectedCourses.length > 0 ) {
     query = {
       courses : {
         $elemMatch : {
           _id : {
-            $in : selectedCompanies
+            $in : selectedCourses
           }
         }
       }

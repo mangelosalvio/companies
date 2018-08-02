@@ -55,6 +55,7 @@ class CompanyList extends Component {
         const { selectedCourses } = this.state;
         const index = this.state.selectedCourses.indexOf(course);
         selectedCourses.splice(index,1);
+        console.log(selectedCourses);
         this.setState({
             selectedCourses
         }, this.updateCompany);
@@ -100,7 +101,7 @@ class CompanyList extends Component {
 
     onCompanySelected = (company) => {
         if ( company._id === this.state.selectedCompany._id ) {
-            this.setState({ selectedCompany : {}, selectedCourses : {} }, () => {
+            this.setState({ selectedCompany : {}, selectedCourses : [] }, () => {
                 this.getCompaniesFromCourses()
             })
         } else {
@@ -146,7 +147,7 @@ class CompanyList extends Component {
                                         return (
                                             <tr key={company._id} className={classnames({
                                                 'active' : this.state.selectedCompany._id === company._id
-                                            })} onClick={() => this.onCompanySelected(company)}>
+                                            })} /* onClick={() => { this.onCompanySelected(company)} } */>
                                                 <td>{ company.company_name }</td>
                                                 <td>{ company.company_address }</td>
                                             </tr>

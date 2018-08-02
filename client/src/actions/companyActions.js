@@ -1,6 +1,6 @@
 import axios from 'axios'
-export const getCompanyList = (selectedCompanies) => {
-  return  axios.post('/api/companies', {selectedCompanies});
+export const getCompanyList = (selectedCourses) => {
+  return  axios.post('/api/companies', {selectedCourses});
 }
 
 
