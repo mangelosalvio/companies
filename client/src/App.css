@@ -1,0 +1,89 @@
+.Aligner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.Aligner-item {
+  display: flex;
+  width : 800px;
+  height : 600px;
+  flex-direction: column;
+}
+
+.Aligner-item > div {
+  text-align: center;
+}
+
+.dtr-options-container {
+  padding : .5rem;
+  flex : 1;
+  text-align : center;
+}
+
+.dtr-options-container .control {
+  text-align : center;
+}
+
+
+.dtr-options-container label {
+  padding: 20px;
+}
+
+.dtr-options-container label input {
+  margin-right: 6px;
+}
+
+.date-container {
+  flex : 1;
+  font-size: 2rem;
+}
+
+
+.time-container {
+  font-size: 6rem;
+  font-weight: bold;
+  flex : 2;
+}
+
+.id-number-container {
+  flex : 1;
+  text-align: center;  
+}
+.id-number-container input {
+  height : 100%;
+  width : 300px;
+  font-size: 20px;
+  text-align: right;
+}
+.id-number-container input {
+  padding : .5rem;
+}
+
+
+.table-container {
+  flex : 4;
+  padding-top: 1rem;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+form { 
+  height: 100%;
+}
+
+.active td {
+  background-color: #c0c0c0;
+}
+
+.full-height {
+  height : 100%;
+}
